@@ -1,5 +1,6 @@
 {
   "name": "bra-ket",
+  "version": "0.0.2",
   "description": "Combine HTML Template with a custom element",
   "main": "bra-ket.js",
   "dependencies": {
