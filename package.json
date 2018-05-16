@@ -3,7 +3,8 @@
   "description": "Combine HTML Template with a custom element",
   "main": "bra-ket.js",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "templ-mount": "0.0.1"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
