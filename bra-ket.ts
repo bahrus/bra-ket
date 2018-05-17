@@ -1,21 +1,5 @@
-import { getESModuleUrl } from './xtal-temp-workaround.js';
-// import { loadTemplate } from './templ-mount.js';
 import {loadTemplate} from 'templ-mount/templ-mount.js';
-export function getBasePath(tagName: string) {
-    let path: string;
-    const link = self[lispToSnakeCase(tagName)];
-    if (link) {
-        path = link.href;
-    } else {
-        const cs = document.currentScript as HTMLScriptElement;
-        if (cs) {
-            path = cs.src;
-        } else {
-            path = getESModuleUrl();
-        }
-    }
-    return path.split('/').slice(0, -1).join('/');
-}
+
 
 
 export function lispToSnakeCase(s: string) {
@@ -94,6 +78,6 @@ export function initCE(tagName: string, cls: any, basePath: string, sharedTempla
 
 
 }
-export const basePath = getBasePath(BraKet.is);
-customElements.define(BraKet.is, BraKet);
+// export const basePath = getBasePath(BraKet.is);
+// customElements.define(BraKet.is, BraKet);
 //initCE(XtalShadow.is, XtalShadow, basePath);
