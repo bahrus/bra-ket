@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "@polymer/polymer": "^3.0.0",
-    "templ-mount": "0.0.1"
+    "templ-mount": "0.0.5"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",

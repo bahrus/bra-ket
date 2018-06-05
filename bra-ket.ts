@@ -1,4 +1,4 @@
-import {loadTemplate} from 'templ-mount/templ-mount.js';
+import {loadTemplate} from 'templ-mount/first-templ.js';
 
 
 
@@ -23,8 +23,11 @@ export function BraKetMixin(superClass) {
 
         customizeClone(clonedNode: DocumentFragment) { }
         initShadowRoot() { }
-        addTemplate() {
-            this.attachShadow({ mode: 'open' });
+        addTemplate(noShadow?: boolean) {
+            if(!noShadow){
+                this.attachShadow({ mode: 'open' });
+            }
+            
             if (!this.CE._template) {
                 this.CE._template = {};
             }
@@ -35,8 +38,13 @@ export function BraKetMixin(superClass) {
             }
             const clonedNode = this.CE._template[tn].content.cloneNode(true) as DocumentFragment;
             this.customizeClone(clonedNode);
-            this.shadowRoot.appendChild(clonedNode);
-            this.initShadowRoot();
+            if(!noShadow){
+                this.shadowRoot.appendChild(clonedNode);
+                this.initShadowRoot();
+            }else{
+                this.appendChild(clonedNode);
+            }
+            
         }
     }
 }
