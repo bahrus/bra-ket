@@ -44,7 +44,7 @@ export function BraKetMixin(superClass) {
             }else{
                 this.appendChild(clonedNode);
             }
-            
+            this.setAttribue("shadowed", true);
         }
     }
 }
@@ -52,13 +52,9 @@ export class BraKet extends BraKetMixin(HTMLElement){
     constructor() {
         super();
         if (Object.getPrototypeOf(this) === BraKet.prototype) {
-
         } else {
-            
             this.addTemplate();
         }
-
-
     }
 }
 
