@@ -1,6 +1,6 @@
 {
   "name": "bra-ket",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Combine HTML Template with a custom element",
   "main": "bra-ket.js",
   "repository": "https://github.com/bahrus/bra-ket",
