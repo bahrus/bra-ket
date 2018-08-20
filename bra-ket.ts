@@ -44,7 +44,7 @@ export function BraKetMixin(superClass) {
             }else{
                 this.appendChild(clonedNode);
             }
-            this.setAttribute("shadowed", true);
+            this.setAttribute("shadowed", 'true');
         }
     }
 }
