@@ -3,6 +3,7 @@
   "version": "0.0.9",
   "description": "Combine HTML Template with a custom element",
   "main": "bra-ket.js",
+  "module": "bra-ket.js",
   "repository": "https://github.com/bahrus/bra-ket",
   "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
