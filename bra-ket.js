@@ -76,4 +76,3 @@ export function initCE(tagName, cls, basePath, sharedTemplateTagName) {
 // export const basePath = getBasePath(BraKet.is);
 // customElements.define(BraKet.is, BraKet);
 //initCE(XtalShadow.is, XtalShadow, basePath);
-//# sourceMappingURL=bra-ket.js.map
