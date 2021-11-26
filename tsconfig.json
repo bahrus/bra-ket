@@ -1,12 +1,16 @@
 {
 	"compilerOptions": {
-		"target": "es2017",
-		"module":"es2015",
+		"target": "ESNext",
+		"module":"ESNext",
 		"sourceMap": true,
-		"experimentalDecorators": true,
+		"experimentalDecorators": false,
 		"newLine": "LF",
 		"strict": true,
+		"watch": true
 	},
+	"files": [
+		"bra-ket.ts"
+	],
 	"exclude":[
 		"build",
 		"bower_components",
