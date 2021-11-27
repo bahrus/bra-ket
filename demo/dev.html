@@ -18,8 +18,12 @@
     </form>
     <bra-ket-ui5 -innerHTML></bra-ket-ui5>
     <script type=module>
-        import '../bra-ket-ui5.js';
-        import 'be-reformable/be-reformable.js';
+        async function load(){
+            await import('be-reformable/be-reformable.js');
+            await import('../bra-ket-ui5.js');
+
+        }
+        load();        
     </script>
 </body>
 </html>
