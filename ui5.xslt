@@ -5,8 +5,13 @@
             <xsl:apply-templates select="@*|node()"/>
         </xsl:copy>
     </xsl:template>
+
+    <xsl:template match="h1">
+        <ui5-title level="H1"><xsl:value-of select="."/></ui5-title>
+    </xsl:template>
+
     <xsl:template match="table">
-        <h3><xsl:value-of select="caption"/></h3>
+        <ui5-title level="H2"><xsl:value-of select="caption"/></ui5-title>
         <ui5-table>
             <xsl:apply-templates select="thead"/>
             <xsl:apply-templates select="tbody"/>

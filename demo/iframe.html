@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <iframe id=myIframe src="https://cf-sw.bahrus.workers.dev/?href=https://cdn.skypack.dev/xtal-editor/custom-elements.json&embedded=true"></iframe>
+    <button onclick="test()">test</button>
+    <script>
+        function test(){
+            console.log(myIframe.contentWindow.document.body.outerHTML);
+        }
+    </script>
+</body>
+</html>
