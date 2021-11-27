@@ -17,7 +17,8 @@
     "xtal-test": "0.0.52",
     "@skypack/package-check": "0.2.2",
     "@custom-elements-manifest/analyzer": "0.5.7",
-    "@web/dev-server": "0.1.28"
+    "@web/dev-server": "0.1.28",
+    "be-reformable": "0.0.19"
   },
   "scripts": {
     "serve": "node node_modules/xtal-test/serve.js",

@@ -7,10 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-
-    <bra-ket-ui5></bra-ket-ui5>
+    <form action="https://cf-sw.bahrus.workers.dev/" be-reformable='{
+        "as": "text",
+        "autoSubmit": true
+    }'
+        target="bra-ket-ui5[-innerHTML]"
+    >
+        <input type=hidden name=href value=https://cdn.skypack.dev/xtal-editor/custom-elements.json>
+        <input type=hidden name=embedded value=true>
+    </form>
+    <bra-ket-ui5 -innerHTML></bra-ket-ui5>
     <script type=module>
-        import '../bra-ket-ui5.js'
+        import '../bra-ket-ui5.js';
+        import 'be-reformable/be-reformable.js';
     </script>
 </body>
 </html>
