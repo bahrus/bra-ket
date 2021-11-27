@@ -8,8 +8,21 @@
   "author": "bahrus <anderson.bruce.b@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "be-definitive": "0.0.9",
+    "be-ferried": "0.0.2",
+    "@ui5/webcomponents": "1.0.1",
+    "xtal-element": "0.0.453"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "xtal-test": "0.0.52",
+    "@skypack/package-check": "0.2.2",
+    "@custom-elements-manifest/analyzer": "0.5.7",
+    "@web/dev-server": "0.1.28"
+  },
+  "scripts": {
+    "serve": "node node_modules/xtal-test/serve.js",
+    "start": "web-dev-server --node-resolve --app-index demo/index.html --open",
+    "package-check": "package-check",
+    "doc": "custom-elements-manifest analyze"
   }
 }

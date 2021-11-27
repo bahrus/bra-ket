@@ -2,14 +2,14 @@
 	"compilerOptions": {
 		"target": "ESNext",
 		"module":"ESNext",
-		"sourceMap": true,
+		"sourceMap": false,
 		"experimentalDecorators": false,
 		"newLine": "LF",
 		"strict": true,
 		"watch": true
 	},
 	"files": [
-		"bra-ket.ts"
+		"bra-ket-ui5.ts"
 	],
 	"exclude":[
 		"build",
