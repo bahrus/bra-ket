@@ -13,6 +13,14 @@ import 'be-ferried/be-ferried.js';
 
 
 const mainTemplate = tm.html`
+<style>
+    slot[is-ferried]{
+        display: none;
+    }
+    slot[is-ferried].being-ferried{
+        display: block;
+    }
+</style>
 <slot be-ferried='{
     "xslt": ".xsltPath"
 }'></slot>
@@ -26,11 +34,15 @@ export class BraKetUi5Controller extends HTMLElement implements BraKetUi5Actions
 
 export interface BraKetUi5Controller extends BraKetUi5Props{}
 
+const basePath = import.meta.url.replace('bra-ket-ui5.js', '');
+
+const xsltPath = basePath + 'ui5.xslt';
+
 const xe = new XE<BraKetUi5Props & TemplMgmtProps, BraKetUi5Actions>({
     config:{
         tagName: 'bra-ket-ui5',
         propDefaults:{
-            'xsltPath': ''
+            xsltPath
         },
         actions:{
             ...tm.doInitTransform

@@ -10,6 +10,14 @@ import { XE } from 'xtal-element/src/XE.js';
 import { tm } from 'trans-render/lib/mixins/TemplMgmtWithPEST.js';
 import 'be-ferried/be-ferried.js';
 const mainTemplate = tm.html `
+<style>
+    slot[is-ferried]{
+        display: none;
+    }
+    slot[is-ferried].being-ferried{
+        display: block;
+    }
+</style>
 <slot be-ferried='{
     "xslt": ".xsltPath"
 }'></slot>
@@ -18,11 +26,13 @@ const mainTemplate = tm.html `
 `;
 export class BraKetUi5Controller extends HTMLElement {
 }
+const basePath = import.meta.url.replace('bra-ket-ui5.js', '');
+const xsltPath = basePath + 'ui5.xslt';
 const xe = new XE({
     config: {
         tagName: 'bra-ket-ui5',
         propDefaults: {
-            'xsltPath': ''
+            xsltPath
         },
         actions: {
             ...tm.doInitTransform

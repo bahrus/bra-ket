@@ -9,7 +9,7 @@
   "license": "MIT",
   "dependencies": {
     "be-definitive": "0.0.9",
-    "be-ferried": "0.0.2",
+    "be-ferried": "0.0.5",
     "@ui5/webcomponents": "1.0.1",
     "xtal-element": "0.0.453"
   },
