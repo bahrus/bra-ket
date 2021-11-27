@@ -22,7 +22,7 @@
   },
   "scripts": {
     "serve": "node node_modules/xtal-test/serve.js",
-    "start": "web-dev-server --node-resolve --app-index demo/index.html --open",
+    "start": "web-dev-server --node-resolve --app-index demo/dev.html --open",
     "package-check": "package-check",
     "doc": "custom-elements-manifest analyze"
   }

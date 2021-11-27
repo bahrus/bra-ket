@@ -7,23 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="https://cf-sw.bahrus.workers.dev/" be-reformable='{
-        "as": "text",
-        "autoSubmit": true
-    }'
-        target="bra-ket-ui5[-innerHTML]"
-    >
-        <input type=hidden name=href value=https://cdn.skypack.dev/xtal-editor/custom-elements.json>
-        <input type=hidden name=embedded value=true>
-    </form>
-    <bra-ket-ui5 -innerHTML></bra-ket-ui5>
+    <k-fetch href="https://cf-sw.bahrus.workers.dev/?href=https://cdn.skypack.dev/xtal-editor/custom-elements.json&embedded=true" as=html target=bra-ket-ui5></k-fetch>
+    <bra-ket-ui5 ></bra-ket-ui5>
     <script type=module>
         async function load(){
-            await import('be-reformable/be-reformable.js');
+            await import('https://unpkg.com/k-fetch@0.0.6/k-fetch.js');
             await import('../bra-ket-ui5.js');
 
         }
         load();        
-    </script>
+    </script> 
+
 </body>
 </html>
