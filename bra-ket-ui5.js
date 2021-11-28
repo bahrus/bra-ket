@@ -10,6 +10,7 @@ import "@ui5/webcomponents/dist/Title.js";
 import { XE } from 'xtal-element/src/XE.js';
 import { tm } from 'trans-render/lib/mixins/TemplMgmtWithPEST.js';
 import 'be-ferried/be-ferried.js';
+import { BraKetController } from './bra-ket.js';
 const mainTemplate = tm.html `
 <style>
     slot[is-ferried]{
@@ -25,7 +26,7 @@ const mainTemplate = tm.html `
 <div></div>
 <be-hive></be-hive>
 `;
-export class BraKetUi5Controller extends HTMLElement {
+export class BraKetUi5Controller extends BraKetController {
 }
 const basePath = import.meta.url.replace('bra-ket-ui5.js', '');
 const xsltPath = basePath + 'ui5.xslt';

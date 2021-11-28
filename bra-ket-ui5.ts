@@ -9,9 +9,9 @@ import "@ui5/webcomponents/dist/TableCell.js"; //(for ui5-table-cell)
 import "@ui5/webcomponents/dist/Title.js";
 import { PropInfoExt, XE } from 'xtal-element/src/XE.js';
 import { TemplMgmtActions, TemplMgmtProps, tm } from 'trans-render/lib/mixins/TemplMgmtWithPEST.js';
-import {BraKetUi5Actions, BraKetUi5Props} from './types';
+import {BraKetActions, BraKetProps} from './types';
 import 'be-ferried/be-ferried.js';
-
+import {BraKetController} from './bra-ket.js';
 
 const mainTemplate = tm.html`
 <style>
@@ -29,17 +29,17 @@ const mainTemplate = tm.html`
 <be-hive></be-hive>
 `;
 
-export class BraKetUi5Controller extends HTMLElement implements BraKetUi5Actions{
+export class BraKetUi5Controller extends BraKetController implements BraKetActions{
 
 }
 
-export interface BraKetUi5Controller extends BraKetUi5Props{}
+export interface BraKetUi5Controller extends BraKetProps{}
 
 const basePath = import.meta.url.replace('bra-ket-ui5.js', '');
 
 const xsltPath = basePath + 'ui5.xslt';
 
-const xe = new XE<BraKetUi5Props & TemplMgmtProps, BraKetUi5Actions>({
+const xe = new XE<BraKetProps & TemplMgmtProps, BraKetActions>({
     config:{
         tagName: 'bra-ket-ui5',
         propDefaults:{

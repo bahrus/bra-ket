@@ -1,7 +1,7 @@
-export interface BraKetUi5Props{
+export interface BraKetProps{
     xsltPath: string;
 }
 
-export interface BraKetUi5Actions{
+export interface BraKetActions{
 
 }
