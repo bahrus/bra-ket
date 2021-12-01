@@ -28,7 +28,13 @@
 
     <xsl:template match="tbody">
         <xsl:for-each select="tr">
+            <xsl:variable name="row" select="node()"/>
             <ui5-table-row>
+                <xsl:for-each select="$row/@*">
+                    <xsl:attribute name="{name()}">
+                        hello
+                    </xsl:attribute>
+                </xsl:for-each>
                 <xsl:for-each select="td">
                     <ui5-table-cell>
                         <xsl:value-of select="."/>
