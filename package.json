@@ -14,7 +14,7 @@
     "xtal-element": "0.0.453"
   },
   "devDependencies": {
-    "xtal-test": "0.0.52",
+    "xtal-test": "0.0.57",
     "@skypack/package-check": "0.2.2",
     "@custom-elements-manifest/analyzer": "0.5.7",
     "@web/dev-server": "0.1.28",
